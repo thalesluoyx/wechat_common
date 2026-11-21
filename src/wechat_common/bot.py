@@ -44,6 +44,15 @@ class ChannelRunner:
     def setup_handlers(self, client: WSClient) -> None:
         async def on_all(frame: WsFrame):
             body = frame.body or {}
+            if isinstance(body, str):
+                try:
+                    import json
+                    body = json.loads(body)
+                except Exception:
+                    body = {}
+            elif not isinstance(body, dict):
+                body = {}
+
             from_info = body.get("from") or {}
             userid = from_info.get("userid") if isinstance(from_info, dict) else None
             chat_id = body.get("chatid") or userid
@@ -53,6 +62,15 @@ class ChannelRunner:
 
         async def on_message(frame: WsFrame):
             body = frame.body or {}
+            if isinstance(body, str):
+                try:
+                    import json
+                    body = json.loads(body)
+                except Exception:
+                    body = {}
+            elif not isinstance(body, dict):
+                body = {}
+
             from_info = body.get("from") or {}
             userid = from_info.get("userid") if isinstance(from_info, dict) else None
             chat_id = body.get("chatid") or userid
