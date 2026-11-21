@@ -6,12 +6,36 @@
       "id": "daily_activity",
       "name": "日常运动",
       "enabled": true,
-      "bot_id": "YOUR_WECOM_BOT_ID",
-      "bot_secret": "YOUR_WECOM_BOT_SECRET",
-      "session_id": "YOUR_ANTIGRAVITY_SESSION_UUID",
+      "bot_id": "YOUR_DAILY_BOT_ID",
+      "bot_secret": "YOUR_DAILY_BOT_SECRET",
+      "session_id": "b3f54d18-42b5-45e4-aebe-d9ca18f31103",
       "prompt_template": "用户通过微信发来日常运动消息：{user_text}\n请按照工作区日常运动规则进行记录或回答，若为运动打卡请使用 record.js 写入数据库，并给出简明亲切的回复。",
       "flow_log_path": "c:/path/to/日常运动微信流水.md",
       "timeout_sec": 35,
+      "last_chat_id": ""
+    },
+    {
+      "id": "winter_holiday_2027",
+      "name": "2027寒假",
+      "enabled": true,
+      "bot_id": "YOUR_HOLIDAY_BOT_ID",
+      "bot_secret": "YOUR_HOLIDAY_BOT_SECRET",
+      "session_id": "d973899e-43c3-405d-be73-5aa5b86e2df8",
+      "prompt_template": "用户通过企业微信[{name}]发来消息：{user_text}\n请作为2027寒假格鲁吉亚滑雪旅行专属管家，结合知识库中行程安排、机票住宿、预算管理与行前筹备规则进行处理与回复。",
+      "flow_log_path": "c:/path/to/2027寒假微信流水.md",
+      "timeout_sec": 45,
+      "last_chat_id": ""
+    },
+    {
+      "id": "klara_chat",
+      "name": "Klara_Chat",
+      "enabled": true,
+      "bot_id": "YOUR_KLARA_BOT_ID",
+      "bot_secret": "YOUR_KLARA_BOT_SECRET",
+      "session_id": "0db80fe3-214e-4011-955a-80376bd6ba41",
+      "prompt_template": "用户通过企业微信[{name}]发来消息：{user_text}\n请作为 Klara（观察者），严格遵循 SOUL.md 灵魂契约与沟通风格进行深刻、真诚且富有洞察力的回复。",
+      "flow_log_path": "c:/path/to/Klara微信流水.md",
+      "timeout_sec": 45,
       "last_chat_id": ""
     }
   ]
