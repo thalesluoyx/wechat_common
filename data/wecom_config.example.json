@@ -1,0 +1,18 @@
+{
+  "corp_id": "YOUR_CORP_ID",
+  "ipc_port": 28888,
+  "channels": [
+    {
+      "id": "daily_activity",
+      "name": "日常运动",
+      "enabled": true,
+      "bot_id": "YOUR_WECOM_BOT_ID",
+      "bot_secret": "YOUR_WECOM_BOT_SECRET",
+      "session_id": "YOUR_ANTIGRAVITY_SESSION_UUID",
+      "prompt_template": "用户通过微信发来日常运动消息：{user_text}\n请按照工作区日常运动规则进行记录或回答，若为运动打卡请使用 record.js 写入数据库，并给出简明亲切的回复。",
+      "flow_log_path": "c:/path/to/日常运动微信流水.md",
+      "timeout_sec": 35,
+      "last_chat_id": ""
+    }
+  ]
+}
